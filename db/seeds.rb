@@ -8,6 +8,7 @@ end
   Book.create(
     author: Author.all.sample,
     isbn: FFaker::Book.isbn,
+    title: FFaker::Book.title,
     publisher: FFaker::Company.name,
     sinopsis: FFaker::Book.description
   )
