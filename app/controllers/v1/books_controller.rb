@@ -6,6 +6,6 @@ class V1::BooksController < ApplicationController
   private
 
   def paginate(collection)
-    collection.limit(20).offset([params.fetch(:page, 1), 1].max ) * 20)
+    collection.limit(20).offset([params.fetch(:page, 1).to_i, 1].max ) * 20)
   end
 end
