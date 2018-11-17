@@ -7,6 +7,11 @@ class BookQuery
   where_attributes :id, :title, :publisher, :isbn, :author_name
   order_attributes :id, :title, :isbn, :author_name
 
+  # This method isn't needed, but it's here to show you how to create a default collection
+  def self.default_collection
+    Book.all
+  end
+
   def filter_by_author_name(name)
     @collection = @collection.join(:author).where(authors: { name: name })
   end
