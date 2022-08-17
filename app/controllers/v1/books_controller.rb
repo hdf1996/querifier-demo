@@ -1,6 +1,12 @@
 class V1::BooksController < ApplicationController
   def index
-    render json: paginate(BookQuery.new(params).collection)
+    render json: paginate(BookQuery.new(params).collection.includes(:author))
+  end
+
+  def show
+    book = Book.find(params[:id])
+
+    render json: book
   end
 
   private
