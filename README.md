@@ -3,6 +3,8 @@
 This repository is a demo for the gem Querifier. You can find more info about it here:
 https://github.com/hdf1986/querifier
 
+Frontend demo can be found at https://github.com/hdf1986/querifier-demo-frontend
+
 ## Required software
 
 - Postgresql 9.4+ (14 recommended)
